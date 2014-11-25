@@ -1,12 +1,15 @@
 <h1>Sign In</h1>
 
-<form action="/users" method="post">
+<form action="/session" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label>Email<br>
-    <input name="user[email]" type="text"><br>
+    <input name="user[username]" type="text"><br>
   </label><br>
   <label>Password<br>
     <input name="user[password]" type="password"><br>
   </label><br>
   <input type="submit" value="Sign In" class="btn btn-primary"><br>
 </form>
+<% unless logged_in? %>
+<%= link_to "Not a User? Sign Up here!", new_user_url%>
+<% end %>

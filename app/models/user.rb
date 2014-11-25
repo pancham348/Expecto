@@ -1,15 +1,17 @@
 class User < ActiveRecord::Base
-  after_initialize :ensure_session_token
-  attr_reader :password, :first_name, :last_name, :location, :img_src
   validates :username, :first_name, :last_name, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
+  
+  after_initialize :ensure_session_token
+  attr_reader :password
+  
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
   
   def is_password?(password)
-    Bcrypt::Password.new(self.password_digest).is_password?(password)
+    BCrypt::Password.new(self.password_digest).is_password?(password)
   end
   
   def reset_session_token!

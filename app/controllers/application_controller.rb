@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   end
   
   def logged_in?
-    	return true unless session[:session_token].nil?
+    	return true unless session[:token].nil?
     	false
   end
     
