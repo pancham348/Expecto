@@ -14,12 +14,25 @@
  *= require_self
  */
 .nav-bar{
-	background-color: #8B008B;
+	background-color: #af0606;
 	line-height: 50px;
-	border: purple solid 10px;
+	border: #c41200 solid 10px;
+	color: yellow;
 }
 
 .main-title{
-	text-align: center;
+	margin-left: 50%;
+	margin-right: 50%;
+	margin-top: 25%;
 	display: inline;
+}
+
+#sidebar{
+	position: absolute;
+	top:175px; left:50px;
+    width:50px;
+}
+
+#sign-out{
+	float: right;
 }

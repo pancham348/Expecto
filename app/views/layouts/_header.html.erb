@@ -1,6 +1,9 @@
 <nav class= "nav-bar">
+	<%= link_to 'Home', root_url %>
 	<% if logged_in? %>
+	<div id="sign-out">
 	<%= link_to 'Sign Out', session_url, method: :delete %>
+   </div>
 	<% else %>
 	<%= link_to 'Sign In', new_session_url%>
 	<% end %>

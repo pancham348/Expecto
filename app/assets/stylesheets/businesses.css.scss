@@ -1,3 +1,15 @@
 // Place all the styles related to the businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.wiz-biz {
+	display: block;
+	list-style-position: inside;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.biz-main-pic img {
+	
+	max-height: 150px;
+	max-width: 150px;
+}

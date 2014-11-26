@@ -1,9 +1,22 @@
+<h2>Best of Expecto: London</h2>
+<ul id="biz-main-page">
 <% businesses.each(function(biz){ %>
-	<li class="wiz-biz">Name: <%= biz.get("name") %><br>
+	<li class="wiz-biz" data-id="<%= biz.get('id') %>"><%= biz.get("name") %><br>
+		<div class="biz-main-pic">
+			<a href="#/businesses/<%=biz.get('id')%>"><img src="<%= biz.get('img_url') %>"></a>
+		</div><br>
 		Location: <%= biz.get("location") %><br>
 		Rating: <%= biz.get("rating") %><br>
 		Category: <%= biz.get("category") %><br>
 		Neigborhood: <%= biz.get("neighborhood") %><br>
-		<img src="<%= biz.get('img_url') %>"
-	</li>
+	</li><br>
 <% }) %>
+</ul>
+
+<div id="sidebar">
+<ul class="categories">
+	<li data-id="Pubs"><a href="#">Pubs</a></li>
+	<li data-id="Banks"><a href="#/categories/Banks">Banks</a></li>
+	<li data-id="shops"><a href="#/categories/shops">Shops</a></li>
+</ul>
+</div>
