@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+  before_action :ensure_sign_in
   
   def new
     @user = User.new
@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in(@user)
-      debugger
       redirect_to root_url
     else
       flash.now[:errors] = @user.errors.full_messages

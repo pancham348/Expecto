@@ -1,0 +1,1 @@
+json.extract!(@business, :name, :location, :rating, :description)

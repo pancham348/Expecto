@@ -33,6 +33,9 @@ gem "better_errors"
 
 gem "binding_of_caller"
 gem 'newrelic_rpm'
+gem 'backbone-on-rails'
+gem 'rename'
+gem 'annotate'
 # Use unicorn as the app server
 # gem 'unicorn'
 

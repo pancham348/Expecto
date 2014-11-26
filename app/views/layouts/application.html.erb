@@ -7,9 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if logged_in? %>
-<%= link_to 'Sign Out', session_url, method: :delete %>
-<% end %>
+	<%= render partial: "layouts/header" %>
+	
 
 <%= yield %>
 

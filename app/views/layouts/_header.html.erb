@@ -1,0 +1,8 @@
+<nav class= "nav-bar">
+	<% if logged_in? %>
+	<%= link_to 'Sign Out', session_url, method: :delete %>
+	<% else %>
+	<%= link_to 'Sign In', new_session_url%>
+	<% end %>
+	<h1 class="main-title">Expecto</h1>
+</nav>
