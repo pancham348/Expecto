@@ -36,6 +36,7 @@ gem 'newrelic_rpm'
 gem 'backbone-on-rails'
 gem 'rename'
 gem 'annotate'
+gem 'seed_dump'
 # Use unicorn as the app server
 # gem 'unicorn'
 
