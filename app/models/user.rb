@@ -17,6 +17,7 @@
 class User < ActiveRecord::Base
   validates :username, :first_name, :last_name, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
+  has_many :reviews
   
   after_initialize :ensure_session_token
   attr_reader :password

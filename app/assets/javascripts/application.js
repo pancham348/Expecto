@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap
 //= require jquery_ujs
+//= require jquery.serializeJSON
 //= require turbolinks
 //= require underscore
 //= require backbone

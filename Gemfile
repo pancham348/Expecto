@@ -37,6 +37,7 @@ gem 'backbone-on-rails'
 gem 'rename'
 gem 'annotate'
 gem 'seed_dump'
+gem 'bootstrap-sass'
 # Use unicorn as the app server
 # gem 'unicorn'
 

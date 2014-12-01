@@ -12,8 +12,8 @@
 #
 
 class Review < ActiveRecord::Base
-  validates :rating, :content, :user_id, :buisiness_id, presence: true
-  validates :user_id, :buisiness_id, uniqueness: true
+  validates :rating, :content, :user_id, :business_id, presence: true
+  validates :user_id, :business_id, uniqueness: true
   belongs_to :user
   belongs_to :business
 end

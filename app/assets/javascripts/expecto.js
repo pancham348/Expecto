@@ -7,7 +7,10 @@ window.Expecto= {
 	  new Expecto.Routers.Businesses({
 		  $rootEl: $("#content")
 	  });
-	  Backbone.history.start();
+	  
+	  if (!Backbone.History.started) {
+	  	Backbone.history.start();
+	  }
   }
 };
 
