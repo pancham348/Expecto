@@ -1,5 +1,6 @@
 <form id="new-review-form">
-	<label>Rating<input type="text" name="review[rating]" id="review_rating"></label><br>
-	<label>Review</label><textarea name="review[content]" id="review_content"></textarea>
+	<label>Rating<input type="text" name="review[rating]" class="review_rating"></label><br>
+	<label>Review</label><textarea name="review[content]" class="review_content"></textarea>
+	<input type="hidden" name="review[business_id]" value="<%= this.business_id %>">
 	<button id="review-submit">Submit</review>
 </form>

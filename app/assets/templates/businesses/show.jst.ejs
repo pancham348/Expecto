@@ -1,13 +1,14 @@
+<!-- <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAR2vk_lVF8GENKlvPOVcQFoCmkOAGXMg"></script> -->
 <div class="biz-show">
 	<%= business.get("name") %><br>
 	<div class="biz-show-pic">
 		<img src="<%= business.get('img_url') %>"
 	</div><br>
+	<div id="map-canvas" style="width:500px;height:380px;"></div>
 	Location: <%= business.get("location") %><br>
 	Rating: <%= business.get("rating") %><br>
 	Category: <%= business.get("category") %><br>
 	Neigborhood: <%= business.get("neighborhood") %><br>
 </li><br>
-<div id="map-canvas" style="width: 100%; height: 100%"></div>
 <div class="reviews"></div>
 <div class="reviews-form"></div>

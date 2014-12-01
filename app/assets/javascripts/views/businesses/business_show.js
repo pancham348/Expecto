@@ -17,7 +17,20 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		if (_currentUserJSON != 'null') {
 			this.addReviewForm();
 		}
+
+		// google.maps.event.addDomListener(window, 'load', this.active);
     },
+	
+ 	active: function() {
+ 	  var mapOptions = {
+ 	    zoom: 8,
+ 	    center: new google.maps.LatLng(-34.397, 150.644)
+ 	  };
+
+ 	  var map = new google.maps.Map(document.getElementById('map-canvas'),
+ 	      mapOptions);
+ 	  //debugger;
+ 	},
 	
 	addReview: function(review){
 			var reviewsShow = new Expecto.Views.ReviewsShow({model: review});
@@ -25,7 +38,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		},
 		
 	addReviewForm: function(review){
-			var reviewsForm = new Expecto.Views.ReviewsForm({model: this.model});
+			var reviewsForm = new Expecto.Views.ReviewsForm({model: this.model, business: this.model});
 			this.addSubview(".reviews-form", reviewsForm)
 		},
 });

@@ -1,6 +1,7 @@
 module Api
   class BusinessesController < ApiController
-  
+    helper_method :current_business
+    
     def create
       @business = Business.new(business_params)
       if @business.save
@@ -9,7 +10,7 @@ module Api
         render json: @business.errors.full_messages, status: :unprocessable_entity  
       end
     end
-  
+    
     def show
       @business = Business.find(params[:id])
       render json: @business.to_json(include: :reviews)

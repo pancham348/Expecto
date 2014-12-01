@@ -1,8 +1,9 @@
 <nav class= "nav-bar">
-	<%= link_to 'Home', root_url %>
+	<%= link_to 'Home', '#' %>
 	<% if logged_in? %>
 	<div id="sign-out">
 	<%= link_to 'Sign Out', session_url, method: :delete %>
+	<%= link_to 'My Profile', "#/users/#{current_user.id}" %>
    </div>
 	<% else %>
 	<%= link_to 'Sign In', new_session_url%>

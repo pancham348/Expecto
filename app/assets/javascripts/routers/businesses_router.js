@@ -7,7 +7,8 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 	routes: {
 		"":"index",
 		"categories/:id" : "category",
-		"businesses/:id" : "show"
+		"businesses/:id" : "show",
+		"users/:id" : "showUser"
 	},
 	
 	index: function(){
@@ -42,6 +43,13 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 		var formView = new Expecto.Views.BusinessShow({model: business});
 		//debugger;
 		this._swapView(formView)
+	},
+	
+	showUser: function(id){
+		Expecto.Collections.users.fetch()
+		var user = Expecto.Collections.users.getOrFetch(id);
+		var formView = new Expecto.Views.UsersShow({model: user});
+		this._swapView(formView);
 	},
 	
 	_swapView: function(view){

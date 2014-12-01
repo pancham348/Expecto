@@ -8,7 +8,6 @@ Expecto.Views.ReviewsShow = Backbone.CompositeView.extend({
     render: function(){
   	  var renderedContent = this.template({review: this.model})
   	  this.$el.html(renderedContent);
-
   	  return this;
     },
 	
