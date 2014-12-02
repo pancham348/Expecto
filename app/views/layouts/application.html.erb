@@ -4,11 +4,7 @@
   <title>Expecto</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
- <script type="text/javascript"
-  src="//api.filepicker.io/v1/filepicker.js"></script>
-  <script>
-    filepicker.setKey("Ap7rUwceyTBiz0IfLJUgkz");
-  </script>
+
  
   <%= csrf_meta_tags %>
 
@@ -19,9 +15,14 @@
 
 <%= yield %>
 
-</body>
+<script type="text/javascript" src="http://api.filepicker.io/v1/filepicker.js"></script>
+<script>
+	filepicker.setKey("AINiWE6EwQfOwCZBY30eiz");
+</script>
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 <script>$(Expecto.initialize);</script>
 <script>
   var _currentUserJSON = '<%= current_user.to_json.html_safe %>';
 </script>
+</body>
 </html>

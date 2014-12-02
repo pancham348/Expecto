@@ -41,12 +41,11 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 		Expecto.Collections.businesses.fetch();
 		var business = Expecto.Collections.businesses.getOrFetch(id);
 		var formView = new Expecto.Views.BusinessShow({model: business});
-		//debugger;
 		this._swapView(formView)
 	},
 	
 	showUser: function(id){
-		Expecto.Collections.users.fetch()
+		//Expecto.Collections.users.fetch()
 		var user = Expecto.Collections.users.getOrFetch(id);
 		var formView = new Expecto.Views.UsersShow({model: user});
 		this._swapView(formView);
@@ -57,7 +56,8 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 			this.currentView.remove();
 		}
 		this.currentView = view;
-		this.$rootEl.html(view.render().$el)
+		this.$rootEl.html(view.render().$el);
+		view.onRender && view.onRender();
 	}	
 	
 });

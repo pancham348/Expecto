@@ -1,5 +1,5 @@
 Expecto.Models.User = Backbone.Model.extend({
-	urlRoot: "api/users",
+	urlRoot: "/api/users",
 	reviews: function(){
 
 			this._reviews = this._reviews ||

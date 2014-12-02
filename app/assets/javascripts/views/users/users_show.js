@@ -2,7 +2,7 @@ Expecto.Views.UsersShow = Backbone.CompositeView.extend({
 
   template: JST['users/show'],
 	events: {
-		"click .btn btn-default": "changeImg"
+		"click .btn-default": "upload"
 	},
     render: function(){
   	  var renderedContent = this.template({user: this.model})
@@ -25,15 +25,11 @@ Expecto.Views.UsersShow = Backbone.CompositeView.extend({
 			this.addSubview(".reviews", reviewsShow)
 		},
 	upload: function () {
+		var that = this;
 	  filepicker.pick(function(blob) {
-	    var newImage = new MyApp.Models.Image({
-	      img_src: blob.url
-	    });
-	    newImage.save({}, {
-	      success: function () {
-	        alert('Image saved!');
-	      }
-	    })
+	    that.model.set("img_src", blob.url)
+		  that.model.save()
+		  that.render()
 	  });
 	}
 
