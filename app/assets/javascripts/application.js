@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
+//= require jquery.rating.pack.js
 //= require jquery.serializeJSON
 //= require turbolinks
 //= require underscore

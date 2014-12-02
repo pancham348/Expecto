@@ -19,4 +19,5 @@ class Business < ActiveRecord::Base
   validates :name, :location, presence: true
   validates :name, uniqueness: true
   has_many :reviews
+  has_many :photos
 end

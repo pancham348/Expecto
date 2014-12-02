@@ -13,6 +13,27 @@ Expecto.Models.Business = Backbone.Model.extend({
 				this.reviews().set(response.reviews, {parse: true})
 				delete response.reviews;
 			}
+			
+			if(this.photos){
+				this.photos().set(response.photos, {parse: true})
+				delete response.photos;
+			}
 			return response;
-		}
+		},
+		
+		photos: function(){
+
+				this._photos = this._photos ||
+					new Expecto.Collections.Photos([],{business: this});
+				return this._photos;
+
+			},
+
+			// parse: function(response){
+// 				if(this.photos){
+// 					this.photos().set(response.photos, {parse: true})
+// 					delete response.photos;
+// 				}
+// 				return response;
+// 			}
 });

@@ -1,5 +1,13 @@
 <form id="new-review-form">
-	<label>Rating<input type="text" name="review[rating]" class="review_rating"></label><br>
+	
+	<div id="rating">
+	<!-- <label>Rating<input type="number" name="review[rating]" id="review_rating" 			class="rating"></label><br> -->
+	<input name="star2" type="radio" class="star" value=1/>
+	<input name="star2" type="radio" class="star" value=1/>
+	<input name="star2" type="radio" class="star" value=1 checked="checked"/>
+	<input name="star2" type="radio" class="star" value=1/>
+	<input name="star2" type="radio" class="star" value=1/>
+	</div>
 	<label>Review</label><textarea name="review[content]" class="review_content"></textarea>
 	<input type="hidden" name="review[business_id]" value="<%= this.business_id %>">
 	<button id="review-submit">Submit</review>

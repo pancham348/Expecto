@@ -6,7 +6,7 @@ module Api
       if @photo.save
         render json: @photo.to_json
       else
-        render json: @photo.erros.ful_messages, status: :unprocessable_entity
+        render json: @photo.errors.full_messages, status: :unprocessable_entity
       end
     end
   
@@ -14,11 +14,11 @@ module Api
       @photo = Photo.find(params[:id])
       render json: @photo
     end
-  
+    
     private
   
     def photo_params
-      params.require(:photo).permit(:img_src, :caption, :busiess_id)
+      params.require(:photo).permit(:img_src, :caption, :business_id)
     end
   end
 end

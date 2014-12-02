@@ -13,7 +13,7 @@ module Api
     
     def show
       @business = Business.find(params[:id])
-      render json: @business.to_json(include: :reviews)
+      render json: @business.to_json(include: [:reviews, :photos])
     end
   
     def index

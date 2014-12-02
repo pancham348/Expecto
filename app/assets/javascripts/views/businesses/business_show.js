@@ -5,8 +5,6 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
   	  var renderedContent = this.template({business: this.model})
   	  this.$el.html(renderedContent);
 	  this.attachSubviews();
-  	  var $filePicker = this.$("input[type=filepicker]")
-  		  filepicker.constructWidget($filePicker[0]);
 	  this.initializeMap();
   	  return this;
     },
@@ -21,9 +19,14 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		this.listenTo(
 					this.model.reviews(), "add", this.addReview
 				);
+		this.listenTo(
+					this.model.photos(), "add", this.addPhoto
+				);
 		this.model.reviews().each(this.addReview.bind(this));
+		this.model.photos().each(this.addPhoto.bind(this));
 		if (_currentUserJSON != 'null') {
 			this.addReviewForm();
+			this.addPhotoForm()
 		}
 		view = this;
     },
@@ -37,15 +40,17 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		var reviewsForm = new Expecto.Views.ReviewsForm({model: this.model, business: this.model});
 		this.addSubview(".reviews-form", reviewsForm)
 	},
-		// upload: function () {
-// 			var that = this;
-// 		  filepicker.pick(function(blob) {
-// 		    that.model.set("img_src", blob.url)
-// 			  that.model.save()
-// 			  that.render()
-// 		  });
-// 		}
-
+	
+	addPhoto: function(photo){
+		var photosShow = new Expecto.Views.PhotosShow({model: photo});
+		this.addSubview(".photos", photosShow);
+	},
+	
+	addPhotoForm: function(){
+		var photoForm = new Expecto.Views.PhotosForm({model: this.model, business: this.model});
+		this.addSubview(".photos-form", photoForm);
+	},
+	
 	initializeMap: function () {
 		if (this._alreadyRendered) {
 	  	  var mapOptions = {

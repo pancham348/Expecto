@@ -13,7 +13,6 @@
 
 class Photo < ActiveRecord::Base
   validates :user_id, :business_id, :img_src, presence: true
-  validates_uniqueness_of :user_id, scope: :business_id
   belongs_to :business
   belongs_to :user
 end
