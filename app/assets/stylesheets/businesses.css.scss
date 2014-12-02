@@ -15,7 +15,12 @@
 }
 
 .biz-show-pic img {
-	
+	display: inline;
+	float: center;
 	max-height: 350px;
 	max-width: 350px;
+}
+
+#map-canvas {
+	display: inline-block;
 }

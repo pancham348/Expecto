@@ -38,6 +38,7 @@ gem 'rename'
 gem 'annotate'
 gem 'seed_dump'
 gem 'bootstrap-sass'
+gem 'filepicker-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
 

@@ -1,10 +1,10 @@
-<!-- <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAR2vk_lVF8GENKlvPOVcQFoCmkOAGXMg"></script> -->
 <div class="biz-show">
-	<%= business.get("name") %><br>
+	<h1><%= business.get("name") %></h1><br>
+	<div id="map-canvas" style="width:350px;height:350px;"></div>
 	<div class="biz-show-pic">
 		<img src="<%= business.get('img_url') %>"
 	</div><br>
-	<div id="map-canvas" style="width:500px;height:380px;"></div>
+	
 	Location: <%= business.get("location") %><br>
 	Rating: <%= business.get("rating") %><br>
 	Category: <%= business.get("category") %><br>
@@ -12,3 +12,26 @@
 </li><br>
 <div class="reviews"></div>
 <div class="reviews-form"></div>
+<script>
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(51.4, -0.12)
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+
+</script>
