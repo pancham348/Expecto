@@ -20,4 +20,9 @@ class Business < ActiveRecord::Base
   validates :name, uniqueness: true
   has_many :reviews
   has_many :photos
+  has_many(
+    :reviewers,
+    through: :reviews,
+    source: :user
+    )
 end

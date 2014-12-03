@@ -25,6 +25,28 @@
 	display: inline-block;
 }
 
+.list-group{
+		
+	width: 200px;
+}
+
+#biz-main-page{
+	position: absolute;
+	top:125px;
+	width: 65%;
+}
+
+#biz-main-page{
+	margin-left: 25%;
+	
+}
+
+#index-title{
+	position: absolute;
+	top:50px; left:50px;
+	color: #961914;
+	text-shadow: 1px 1px #f4de1b
+}
 div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
 div.rating-cancel,div.rating-cancel a{background:url(delete.gif) no-repeat 0 -16px}
 div.star-rating,div.star-rating a{background:url(star.gif) no-repeat 0 0px}

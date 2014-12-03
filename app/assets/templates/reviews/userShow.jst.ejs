@@ -1,7 +1,8 @@
 <ul class="review-list">
 	<li>Rating: <%= review.get("rating") %><br>
 		Review: <%= review.get("content") %><br>
-		Business:  <%= review.get("business_id") %>
+		<% var business = Expecto.Collections.businesses.getOrFetch(review.get("business_id"))%>
+		Business:  <%= business.get("name") %>
 	</li>
 
 </ul>

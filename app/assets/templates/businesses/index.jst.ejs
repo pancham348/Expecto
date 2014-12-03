@@ -1,7 +1,7 @@
-<h2>Best of Expecto: London</h2>
-<ul id="biz-main-page">
+<h2 id="index-title">Best of Expecto: Diagon Alley</h2>
+<ul class="list-group" id="biz-main-page">
 <% businesses.each(function(biz){ %>
-	<li class="wiz-biz" data-id="<%= biz.get('id') %>"><%= biz.get("name") %><br>
+	<li class="list-group-item" id="biz-item" data-id="<%= biz.get('id') %>"><%= biz.get("name") %><br>
 		<div class="biz-main-pic">
 			<a href="#/businesses/<%=biz.get('id')%>"><img src="<%= biz.get('img_url') %>"></a>
 		</div><br>
@@ -9,14 +9,14 @@
 		Rating: <%= biz.get("rating") %><br>
 		Category: <%= biz.get("category") %><br>
 		Neigborhood: <%= biz.get("neighborhood") %><br>
-	</li><br>
+	</li>
 <% }) %>
 </ul>
 
 <div id="sidebar">
-<ul class="categories">
-	<li data-id="Pubs"><a href="#">Pubs</a></li>
-	<li data-id="Banks"><a href="#/categories/Banks">Banks</a></li>
-	<li data-id="shops"><a href="#/categories/shops">Shops</a></li>
+<ul class="list-group">
+	<li class="list-group-item" data-id="Pubs"><a href="#">Pubs</a></li>
+	<li class="list-group-item" data-id="Banks"><a href="#/categories/Banks">Banks</a></li>
+	<li class="list-group-item" data-id="shops"><a href="#/categories/shops">Shops</a></li>
 </ul>
 </div>

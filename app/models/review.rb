@@ -15,4 +15,5 @@ class Review < ActiveRecord::Base
   validates :rating, :content, :user_id, :business_id, presence: true
   validates_uniqueness_of :user_id, scope: :business_id
   belongs_to :business
+  belongs_to :user
 end

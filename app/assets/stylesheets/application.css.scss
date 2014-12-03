@@ -15,6 +15,15 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body { 
+  background: url(http://bradybarr.com/wp-content/uploads/2013/07/parchment-background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 $bgDefault      : #961914;
 $bgHighlight    : #f4de1b;
 $colDefault     : #f1e026;
@@ -29,6 +38,7 @@ $colHighlight   : #ff2b12;
 	.navbar-text {
 		color: $colDefault; }
 	.navbar-nav {
+		float: right;
 		> li {
 			> a {
 				color: $colDefault;
@@ -78,7 +88,7 @@ $colHighlight   : #ff2b12;
 
 #sidebar{
 	position: absolute;
-	top:175px; left:50px;
+	top:125px; left:50px;
     width:50px;
 }
 
