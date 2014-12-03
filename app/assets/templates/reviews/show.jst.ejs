@@ -2,7 +2,7 @@
 	<li class="list-group-item" id="review_item">
 		Rating: <%= review.get("rating") %><br>
 		Review: <%= review.get("content") %><br>
-		User:  <%= user.get("username") %>
+		User:  <%= review.user().get("first_name") %>
 	</li>
 
 </ul>

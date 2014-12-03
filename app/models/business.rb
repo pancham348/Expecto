@@ -25,4 +25,5 @@ class Business < ActiveRecord::Base
     through: :reviews,
     source: :user
     )
+    
 end

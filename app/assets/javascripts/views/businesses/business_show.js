@@ -26,6 +26,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		this.model.photos().each(this.addPhoto.bind(this));
 		if (_currentUserJSON != 'null') {
 			this.addReviewForm();
+			
 			this.addPhotoForm()
 		}
 		view = this;
@@ -66,5 +67,6 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 	onRender: function () {
 		this._alreadyRendered = true;
 		this.initializeMap();
+		$("#input-1").rating();
 	}
 });

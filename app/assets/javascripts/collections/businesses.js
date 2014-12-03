@@ -14,7 +14,6 @@ Expecto.Collections.Businesses = Backbone.Collection.extend({
 				}
 			})
 		}
-		
 		return model;
 	},
 

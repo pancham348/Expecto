@@ -13,12 +13,21 @@ module Api
     
     def show
       @business = Business.find(params[:id])
-      render json: @business.to_json(include: [:reviews, :photos, :reviewers])
+      @business.rating = rating_score
+      render json: @business.to_json(include: {reviews: {include: :user}, photos:{}})
     end
   
     def index
       @businesses = Business.all
       render json: @businesses
+    end
+    
+    def rating_score
+      sum = 0
+      @business.reviews.each do |review|
+       sum += review.rating
+      end
+      return sum / @business.reviews.length
     end
       
     private

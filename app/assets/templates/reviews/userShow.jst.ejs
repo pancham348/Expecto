@@ -3,7 +3,7 @@
 		Rating: <%= review.get("rating") %><br>
 		Review: <%= review.get("content") %><br>
 		<% var business = Expecto.Collections.businesses.getOrFetch(review.get("business_id"))%>
-		Business:  <%= business.get("name") %>
-	</li>
+		Business:  <%= review.business().get("name") %>
+	</li><br>
 </ul>
 

@@ -14,7 +14,6 @@ Expecto.Collections.Users = Backbone.Collection.extend({
   				}
   			})
   		}
-		
   		return model;
   	},
 

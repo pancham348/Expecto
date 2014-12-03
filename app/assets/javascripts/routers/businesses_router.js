@@ -38,7 +38,7 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
     },
 	
 	show: function(id){
-		Expecto.Collections.businesses.fetch();
+		//Expecto.Collections.businesses.fetch();
 		var business = Expecto.Collections.businesses.getOrFetch(id);
 		var formView = new Expecto.Views.BusinessShow({model: business});
 		this._swapView(formView)

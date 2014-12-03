@@ -49,11 +49,20 @@
 }
 
 #review-title{
+	position: absolute;
+	top:75px;
 	margin-left: 25%;
 }
 
 #review-list{
+	position: relative;
+	top:-100px;
 	margin-left: 25%;
+	width: 65%;
+}
+
+.profile-pic{
+	margin-left: 50px;
 }
 
 div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}

@@ -13,12 +13,12 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
-//= require jquery.rating.pack.js
 //= require jquery.serializeJSON
 //= require turbolinks
 //= require underscore
 //= require backbone
 //= require expecto
+//= require star-rating
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models

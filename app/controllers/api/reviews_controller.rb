@@ -6,7 +6,7 @@ module Api
       @review = Review.new(review_params)
       @review.user_id = current_user.id
       if @review.save
-        render json: @review.to_json
+        render json: @review
       else
         render json: @review.errors.full_messages, status: :unprocessable_entity
       end
@@ -14,7 +14,7 @@ module Api
   
     def show
       @review = Review.find(params[:id])
-      render json: @review
+      render json: @review.to_json(include: :user)
     end
   
     private

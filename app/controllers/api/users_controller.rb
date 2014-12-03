@@ -19,7 +19,7 @@ module Api
   
     def show
       @user = User.find(params[:id])
-      render json: @user.to_json(only: [:first_name, :last_name, :img_src], include: [:reviews, :reviewed_businesses])
+      render json: @user.to_json(only: [:first_name, :last_name, :img_src], include: {reviews: {include: :business}})
     end
   
     def update
