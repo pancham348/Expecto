@@ -7,7 +7,9 @@ Expecto.Views.ReviewsShow = Backbone.CompositeView.extend({
 	
 	template: JST['reviews/show'],
     render: function(){
-  	  var renderedContent = this.template({review: this.model})
+		var id = this.model.get("user_id")
+	  var user = Expecto.Collections.users.getOrFetch(id);
+  	  var renderedContent = this.template({review: this.model, user: user})
   	  this.$el.html(renderedContent);
   	  return this;
     },
