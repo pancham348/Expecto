@@ -55,13 +55,20 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 	
 	initializeMap: function () {
 		if (this._alreadyRendered) {
+		  var myLatlng = new google.maps.LatLng(this.model.get("latitude"),this.model.get("longitude"));	
 	  	  var mapOptions = {
 	  	    zoom: 8,
-	  	    center: new google.maps.LatLng(51.4, -0.12)
+	  	    center: myLatlng
 	  	  };
 
 	  	  var map = new google.maps.Map(document.getElementById('map-canvas'),
 	  	      mapOptions);
+		  
+		  var marker = new google.maps.Marker({
+		      position: myLatlng,
+		      map: map,
+		      title: 'Hello World!'
+		  });
 		}
 	},
 	
