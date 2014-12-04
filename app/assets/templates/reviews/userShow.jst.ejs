@@ -1,8 +1,9 @@
 <ul class="list-group" id="review-list">
 	<li class="list-group-item">
-		Rating: <%= review.get("rating") %><br>
+		Rating: <input type="number" class="rating star-input" value="<%= business.get("rating")  %>"<br>
 		Review: <%= review.get("content") %><br>
 		<% var business = Expecto.Collections.businesses.getOrFetch(review.get("business_id"))%>
+		<a href="#/businesses/<%=review.escape("business_id")%>" class="thumbnail"><img src="<%= business.get('img_url') %>"></a>
 		Business:  <%= review.business().get("name") %>
 	</li><br>
 </ul>

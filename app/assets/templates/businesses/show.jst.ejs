@@ -4,9 +4,9 @@
 	<div class="biz-show-pic">
 		<img src="<%= business.get('img_url') %>"
 	</div><br>
-	
+</div>
 	Location: <%= business.get("location") %><br>
-	Rating: <input id="input-2" type="number" class="rating" value="<%= business.get("rating")  %>" readonly="true" data-symbol="&#xf02d"; data-size="xl"><br>
+	Rating: <input type="number" class="rating star-show" value="<%= business.get("rating") %>" data-min=1 data-max=5 readonly="true" data-symbol="&#xf02d"; data-size="xl"><br>
 	Category: <%= business.get("category") %><br>
 	Neigborhood: <%= business.get("neighborhood") %><br>
 </li><br>
@@ -14,4 +14,7 @@
 <div class="reviews-form"></div>
 <div class="photos"></div>
 <div class="photos-form"></div>
-
+<script> 
+	$(".star-input").rating();
+	$(".star-show").rating();
+ </script>

@@ -65,8 +65,14 @@
 	margin-left: 50px;
 }
 
-.list-group h3{
-	text-align: center;
+.biz-name{
+	color: #961914;
+	text-shadow: 1px 1px #f4de1b
+}
+
+.caption{
+	float: right;
+	width: 62%;
 }
 div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
 div.rating-cancel,div.rating-cancel a{background:url(delete.gif) no-repeat 0 -16px}

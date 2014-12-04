@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resource :session
     
     
-     namespace :api, defaults: { format: :json } do
+     namespace :api do
        resources :users
        resources :photos
        resources :businesses, except: [:new, :edit]

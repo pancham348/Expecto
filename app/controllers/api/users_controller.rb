@@ -1,9 +1,10 @@
 module Api
   class UsersController < ApiController
-    before_action :ensure_sign_in
+    #before_action :ensure_sign_in, except: :create
   
     def new
       @user = User.new
+      render :new
     end
   
     def create

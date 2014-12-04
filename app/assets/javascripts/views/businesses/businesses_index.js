@@ -5,6 +5,7 @@ Expecto.Views.BusinessesIndex = Backbone.CompositeView.extend({
 		  "sync add remove", 
 		  this.render
 	  )
+	  
   },
   
   events: {

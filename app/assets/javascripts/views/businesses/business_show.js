@@ -57,7 +57,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		if (this._alreadyRendered) {
 		  var myLatlng = new google.maps.LatLng(this.model.get("latitude"),this.model.get("longitude"));	
 	  	  var mapOptions = {
-	  	    zoom: 8,
+	  	    zoom: 15,
 	  	    center: myLatlng
 	  	  };
 

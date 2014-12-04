@@ -7,14 +7,18 @@
 <ul class="list-group" id="biz-main-page">
 <% businesses.each(function(biz){ %>
 	<li class="list-group-item" id="biz-item" data-id="<%= biz.get('id') %>">
-		<h3 class="biz-name"><%= biz.get("name") %></h3><br>
 		<div class="row">
+			
 		  <div class="col-sm-6 col-md-4">
 			<a href="#/businesses/<%=biz.get('id')%>" class="thumbnail"><img src="<%= biz.get('img_url') %>"></a>
+			</div>
+		<div class="caption">
+			<h3 class="biz-name"><%= biz.get("name") %></h3>
+			<input type="number" class="rating star-input" value="<%= biz.get("rating")  %>" data-min=1 data-max=5 readonly="true" > <br>
+			 <%= biz.get("description") %><br>
 		</div>
-		</div><br>
-		Location: <%= biz.get("location") %><br>
-		Rating: <%= biz.get("rating") %><br>
+		</div>
+		
 		Category: <%= biz.get("category") %><br>
 		Neigborhood: <%= biz.get("neighborhood") %><br>
 	</li>
@@ -28,3 +32,4 @@
 	<li class="list-group-item" data-id="shops"><a href="#/categories/shops">Shops</a></li>
 </ul>
 </div>
+<script> $(".star-input").rating(); </script>
