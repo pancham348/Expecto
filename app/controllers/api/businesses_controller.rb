@@ -24,6 +24,7 @@ module Api
     
     def rating_score
       sum = 0
+      return 0 if @business.reviews.length == 0
       @business.reviews.each do |review|
        sum += review.rating
       end

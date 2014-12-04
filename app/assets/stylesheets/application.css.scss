@@ -16,6 +16,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.hogsmeade{
+	float: right;
+	margin-right: 50px;
+}
+
 body { 
   background: url(http://bradybarr.com/wp-content/uploads/2013/07/parchment-background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;

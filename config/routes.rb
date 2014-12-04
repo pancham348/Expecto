@@ -9,6 +9,7 @@ Rails.application.routes.draw do
        resources :photos
        resources :businesses, except: [:new, :edit]
        resources :categories, except: [:new, :edit]
+       resources :neighborhoods, except: [:new, :edit]
        resources :reviews
      end
 

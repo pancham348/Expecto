@@ -18,7 +18,9 @@
 //= require underscore
 //= require backbone
 //= require expecto
-//= require star-rating
+//= require star-rating.min
+//= require star-rating.min
+//require_tree ./bower_components
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models

@@ -39,6 +39,7 @@ gem 'annotate'
 gem 'seed_dump'
 gem 'bootstrap-sass'
 gem 'filepicker-rails'
+gem "geocoder"
 # Use unicorn as the app server
 # gem 'unicorn'
 

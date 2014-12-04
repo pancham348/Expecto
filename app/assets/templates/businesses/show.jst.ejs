@@ -6,7 +6,7 @@
 	</div><br>
 	
 	Location: <%= business.get("location") %><br>
-	Rating: <%= business.get("rating") %><br>
+	Rating: <input id="input-2" type="number" class="rating" value="<%= business.get("rating")  %>" readonly="true" data-symbol="&#xf02d"; data-size="xl"><br>
 	Category: <%= business.get("category") %><br>
 	Neigborhood: <%= business.get("neighborhood") %><br>
 </li><br>
@@ -14,3 +14,4 @@
 <div class="reviews-form"></div>
 <div class="photos"></div>
 <div class="photos-form"></div>
+

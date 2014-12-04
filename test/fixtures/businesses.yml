@@ -12,6 +12,8 @@
 #  category     :string(255)      not null
 #  neighborhood :string(255)      not null
 #  img_url      :string(255)
+#  latitude     :float
+#  longitude    :float
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -5,6 +5,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
   	  var renderedContent = this.template({business: this.model})
   	  this.$el.html(renderedContent);
 	  this.attachSubviews();
+	  //$("#input-2").rating();
 	  this.initializeMap();
   	  return this;
     },

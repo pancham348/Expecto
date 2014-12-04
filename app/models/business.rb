@@ -12,6 +12,8 @@
 #  category     :string(255)      not null
 #  neighborhood :string(255)      not null
 #  img_url      :string(255)
+#  latitude     :float
+#  longitude    :float
 #
 
 class Business < ActiveRecord::Base
@@ -25,5 +27,4 @@ class Business < ActiveRecord::Base
     through: :reviews,
     source: :user
     )
-    
 end

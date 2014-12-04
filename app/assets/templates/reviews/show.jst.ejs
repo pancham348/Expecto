@@ -1,6 +1,6 @@
 <ul class="list-group" id="review-list">
 	<li class="list-group-item" id="review_item">
-		Rating: <%= review.get("rating") %><br>
+		 <input id="input-3" type="number" class="rating" value="<%= review.get("rating")  %>" readonly="true"><br><br>
 		Review: <%= review.get("content") %><br>
 		User:  <%= review.user().get("first_name") %>
 	</li>

@@ -1,9 +1,17 @@
-<h2 id="index-title">Best of Expecto: Diagon Alley</h2>
+<h2 id="index-title">Best of Expecto: <%= _currentNeighborhood %></h2>
+<% if(_currentNeighborhood = "Diagon Alley") { %>
+<a href="#/neighborhoods/Hogsmeade" class="hogsmeade">Switch to Hogsmeade</a>
+<% }else{ %>
+	<a href="#" class="hogsmeade">Switch to Diagon Alley</a>
+<% } %>
 <ul class="list-group" id="biz-main-page">
 <% businesses.each(function(biz){ %>
-	<li class="list-group-item" id="biz-item" data-id="<%= biz.get('id') %>"><%= biz.get("name") %><br>
-		<div class="biz-main-pic">
-			<a href="#/businesses/<%=biz.get('id')%>"><img src="<%= biz.get('img_url') %>"></a>
+	<li class="list-group-item" id="biz-item" data-id="<%= biz.get('id') %>">
+		<h3 class="biz-name"><%= biz.get("name") %></h3><br>
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+			<a href="#/businesses/<%=biz.get('id')%>" class="thumbnail"><img src="<%= biz.get('img_url') %>"></a>
+		</div>
 		</div><br>
 		Location: <%= biz.get("location") %><br>
 		Rating: <%= biz.get("rating") %><br>
@@ -15,7 +23,7 @@
 
 <div id="sidebar">
 <ul class="list-group">
-	<li class="list-group-item" data-id="Pubs"><a href="#">Food</a></li>
+	<li class="list-group-item" data-id="Food"><a href="#">Food</a></li>
 	<li class="list-group-item" data-id="Banks"><a href="#/categories/Banks">Banks</a></li>
 	<li class="list-group-item" data-id="shops"><a href="#/categories/shops">Shops</a></li>
 </ul>
