@@ -1,8 +1,8 @@
 <h2 id="index-title">Best of Expecto: <%= _currentNeighborhood %></h2>
-<% if(_currentNeighborhood = "Diagon Alley") { %>
-<a href="#/neighborhoods/Hogsmeade" class="hogsmeade">Switch to Hogsmeade</a>
+<% if(_currentNeighborhood === "Diagon Alley") { %>
+	<a href="#/neighborhoods/Hogsmeade" class="neighborhood">Switch to Hogsmeade</a>
 <% }else{ %>
-	<a href="#" class="hogsmeade">Switch to Diagon Alley</a>
+	<a href="#/neighborhoods/Diagon+Alley" class="neighborhood">Switch to Diagon Alley</a>
 <% } %>
 <ul class="list-group" id="biz-main-page">
 <% businesses.each(function(biz){ %>

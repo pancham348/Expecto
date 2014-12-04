@@ -17,8 +17,8 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require backbone.TriggerHappy
 //= require expecto
-//= require star-rating.min
 //= require star-rating.min
 //require_tree ./bower_components
 //= require_tree ../templates

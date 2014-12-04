@@ -2,7 +2,6 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 	
 	initialize: function(options){
 		this.$rootEl = options.$rootEl;
-		this.neighborhood = "Diagon Alley";
 	},
 	
 	routes: {
@@ -14,14 +13,17 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 	},
 	
 	index: function(){
-		Expecto.Collections.businesses.fetch();
-		var businesses = Expecto.Collections.businesses.where({category: "Food", neighborhood: this.neighborhood});
-	  	  var newCollection = new Expecto.Collections.Businesses()
-	  	  for (var i = 0; i < businesses.length; i++) {
-	  		  newCollection.add(businesses[i]);
-	  	  }
-		var formView = new Expecto.Views.BusinessesIndex({collection: newCollection, neighborhood: this.neighborhood})
-		this._swapView(formView)
+		// var businesses = Expecto.Collections.businesses.where({
+		// 	category: "Food",
+		// 	neighborhood: _currentNeighborhood
+		// });
+		// var newCollection = new Expecto.Collections.Businesses(businesses)
+		//
+		// var formView = new Expecto.Views.BusinessesIndex({
+		// 	collection: newCollection
+		// })
+		// this._swapView(formView)
+		Backbone.history.navigate("/categories/Food", {trigger: true});
 	},
 	
     category: function(event){
@@ -30,13 +32,16 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 		if (event === "#") {
 			category = "Food";
 		}
- 	  var businesses = Expecto.Collections.businesses.where({category: category, neighborhood: this.neighborhood});
-	  var newCollection = new Expecto.Collections.Businesses()
-	  for (var i = 0; i < businesses.length; i++) {
-		  newCollection.add(businesses[i]);
-	  }
- 	  var formView = new Expecto.Views.BusinessesIndex({collection: newCollection})
- 	  this._swapView(formView)
+		var businesses = Expecto.Collections.businesses.where({
+		  category: category, 
+		  neighborhood: _currentNeighborhood
+		});
+		var newCollection = new Expecto.Collections.Businesses(businesses)
+
+		var formView = new Expecto.Views.BusinessesIndex({
+			collection: newCollection
+		})
+		this._swapView(formView)
     },
 	
 	show: function(id){
@@ -53,21 +58,22 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 		this._swapView(formView);
 	},
 	
-	switchNeighborhood: function(id){
+	switchNeighborhood: function(neighborhoodName) {
+		neighborhoodName = neighborhoodName.replace(/\+/g, ' ');
 		
-		if (this.neighborhood === "Diagon Alley") {
-			this.neighborhood = "Hogsmeade"
-		}else{
-			this.neighborhood = "Diagon Alley"
-		}
-	  var hood = this.neighborhood;
-   	  var businesses = Expecto.Collections.businesses.where({neighborhood: this.neighborhood});
-  	  var newCollection = new Expecto.Collections.Businesses()
-  	  for (var i = 0; i < businesses.length; i++) {
-  		  newCollection.add(businesses[i]);
-  	  }
-   	  var formView = new Expecto.Views.BusinessesIndex({collection: newCollection, neighborhood: hood})
-   	  this._swapView(formView)
+		var hood = _currentNeighborhood = neighborhoodName;
+		// var businesses = Expecto.Collections.businesses.where({
+		//   neighborhood: hood
+		// });
+		//
+		// var newCollection = new Expecto.Collections.Businesses(businesses)
+		// var indexView = new Expecto.Views.BusinessesIndex({
+		// 	collection: newCollection
+		// })
+		//
+		// debugger
+		// this._swapView(indexView)
+		Backbone.history.navigate('/', {trigger: true})
 	},
 	
 	_swapView: function(view){
