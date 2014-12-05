@@ -1,8 +1,8 @@
 <ul class="list-group review-list">
-	<li class="list-group-item" id="review_item">
+	<li class="list-group-item">
 		<div class="media">
 		  <a class="media-left" href="#/users/<%=review.user().get('id')%>">
-		    <img src="<%= review.user().get('img_src') %>"><br>
+		    <img src="<%= review.user().get('img_src') %>" style="height: 100px; width:100px"><br>
 			<%= review.user().get("first_name") %> <%= review.user().get("last_name") %>
 		  </a>
 		  <div class="media-body">

@@ -5,6 +5,11 @@
 	display: inline-block;
 }
 
+.review-item{
+	height: 100px;
+	width: 100px;
+}
+
 #new-review-form{
 	margin-left: 10%;
 }
@@ -14,6 +19,7 @@
 }
 
 .carousel-photos{
+	width: 500px;
 	overflow: scroll;
 }
 
@@ -55,8 +61,8 @@
 	float: left;
 }
 
-#review-list{
-	margin-left: 20%;
+.review-list{
+	margin-left: 10%;
 	margin-right: 10%;
 	width: 70%;
 }
