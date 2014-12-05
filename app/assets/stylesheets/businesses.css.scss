@@ -1,18 +1,43 @@
 // Place all the styles related to the businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.biz-photo{
+	display: inline-block;
+}
+
+#new-review-form{
+	margin-left: 10%;
+}
+
+#add-photo-form{
+	margin-left: 10%;
+}
+
 .wiz-biz {
 	display: block;
 	list-style-position: inside;
 	margin-left: 25%;
 	margin-right: 25%;
 }
-
+.rating-input{
+	font-size: 25px;
+}
 .thumbnail img{
 	
 	height: 150px;
 	width: 200px;
 }
+
+.user-review img{
+	
+	height: 75px;
+	width: 75px;
+}
+
+.biz-show{
+	margin-left: 10%;
+}
+
 
 .biz-show-pic img {
 	display: inline;
@@ -25,9 +50,20 @@
 	display: inline-block;
 }
 
-.list-group{
-		
-	width: 200px;
+.review-list{
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%px;
+}
+
+#map-photo{
+	margin-left: 10%;
+	
+}
+
+#map-container{
+	width: 80%;
+	margin-left: 10%;
 }
 
 #biz-main-page{
@@ -54,12 +90,6 @@
 	margin-left: 25%;
 }
 
-#review-list{
-	position: relative;
-	top:-100px;
-	margin-left: 25%;
-	width: 65%;
-}
 
 .profile-pic{
 	margin-left: 50px;
@@ -79,6 +109,11 @@
 	float: right;
 	width: 62%;
 }
+
+#user-reviews{
+	margin-left: 10%;
+}
+
 div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:transparent;overflow:hidden}
 div.rating-cancel,div.rating-cancel a{background:url(delete.gif) no-repeat 0 -16px}
 div.star-rating,div.star-rating a{background:url(star.gif) no-repeat 0 0px}

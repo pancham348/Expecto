@@ -45,7 +45,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 	
 	addPhoto: function(photo){
 		var photosShow = new Expecto.Views.PhotosShow({model: photo});
-		this.addSubview(".photos", photosShow);
+		this.addSubview(".carousel-photos", photosShow);
 	},
 	
 	addPhotoForm: function(){

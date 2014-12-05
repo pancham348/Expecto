@@ -17,6 +17,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#map-photos{
+	float: left;
+	width: 80%;
+}
+
+.biz-photo{
+	float: left;
+}
+.sidebar{
+	width: 305px;
+	overflow: hidden;
+}
+
 .neighborhood {
 	float: right;
 	margin-right: 50px;

@@ -1,11 +1,18 @@
-<ul class="list-group" id="review-list">
+<ul class="list-group review-list">
 	<li class="list-group-item" id="review_item">
-		 <input  type="number" class="rating star-input" data-min=1 data-max=5 readonly="true"  value="<%= review.get("rating")  %>" readonly="true"><br><br>
-		Review: <%= review.get("content") %><br>
-		User:  <%= review.user().get("first_name") %>
-	</li>
-
+		<div class="media">
+		  <a class="media-left" href="#/users/<%=review.user().get('id')%>">
+		    <img src="<%= review.user().get('img_src') %>"><br>
+			<%= review.user().get("first_name") %> <%= review.user().get("last_name") %>
+		  </a>
+		  <div class="media-body">
+		    <h4 class="media-heading"><input  type="number" class="rating star-input" data-min=1 data-max=5 readonly="true"  value="<%= review.get("rating")  %>" readonly="true"></h4>
+		    <%= review.get("content") %>
+		  </div>
+		</div>
+	 </li>
 </ul>
 <script> 
 	$(".star-input").rating();
  </script>
+
