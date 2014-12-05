@@ -1,11 +1,11 @@
 <form id="new-review-form">
-	
-	<div class="rateit">
+ <div class="form-group">
 
-	<input class="rating star-input" name="review[rating]" data-min=1 data-max=5 data-step=0.5>
+	<input class="star-input" name="review[rating]" data-min=1 data-max=5 data-step=0.5 data-size="xl">
 
-	</div>
-	<label>Review</label><textarea name="review[content]" class="review_content"></textarea>
+	<label>Review</label><textarea name="review[content]" class="form-control review_content"></textarea>
 	<input type="hidden" name="review[business_id]" value="<%= this.business_id %>">
+	<input type="hidden" name="review[user]" value="<%= this.user %>">
 	<button id="review-submit">Submit</review>
+	</div>
 </form>

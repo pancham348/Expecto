@@ -1,10 +1,17 @@
 <ul class="list-group" id="review-list">
 	<li class="list-group-item">
-		Rating: <input type="number" class="rating star-input" value="<%= business.get("rating")  %>"<br>
-		Review: <%= review.get("content") %><br>
+	
 		<% var business = Expecto.Collections.businesses.getOrFetch(review.get("business_id"))%>
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
 		<a href="#/businesses/<%=review.escape("business_id")%>" class="thumbnail"><img src="<%= business.get('img_url') %>"></a>
-		Business:  <%= review.business().get("name") %>
-	</li><br>
+	</div>
+	<div class="caption">
+		<h5 class="biz-name"><%= review.business().get("name") %></h5>
+		<input type="number" class="rating star-input" value="<%= business.get("rating")  %>">
+		<%= review.get("content") %><br>
+		</div>
+	</div>
+	</li>
 </ul>
 

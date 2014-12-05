@@ -16,7 +16,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 	initialize: function() {
 		this._alreadyRendered = false;
 		
-    	  this.listenTo(this.model, "sync change", this.render)
+    	  this.listenTo(this.model, "sync change add", this.render)
 		this.listenTo(
 					this.model.reviews(), "add", this.addReview
 				);

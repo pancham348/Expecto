@@ -1,15 +1,17 @@
-<h1>Sign In</h1>
+<div class="container">
+<h2 class="form-signin-heading">Please sign in</h2>
 
-<form action="/session" method="post">
+<form action="/session" method="post" class="form-signin" role="form">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <label>Email<br>
-    <input name="user[username]" type="text"><br>
+  <label>Username<br>
+    <input name="user[username]" type="text" class="form-control"><br>
   </label><br>
   <label>Password<br>
-    <input name="user[password]" type="password"><br>
+    <input name="user[password]" type="password" class="form-control"><br>
   </label><br>
   <input type="submit" value="Sign In" class="btn btn-primary"><br>
 </form>
 <% unless logged_in? %>
 <%= link_to "Not a User? Sign Up here!", new_api_user_url%>
 <% end %>
+</div>

@@ -1,18 +1,25 @@
 <div class="biz-show">
 	<h1><%= business.get("name") %></h1><br>
-	<div id="map-canvas" style="width:350px;height:350px;"></div>
-	<div class="biz-show-pic">
-		<img src="<%= business.get('img_url') %>"
-	</div><br>
-</div>
 	Location: <%= business.get("location") %><br>
 	Rating: <input type="number" class="rating star-show" value="<%= business.get("rating") %>" data-min=1 data-max=5 readonly="true" data-symbol="&#xf02d"; data-size="xl"><br>
+<ul class="list-group">
+	<div class="row">
+		
+	<li class="list-group-item"><div id="map-canvas" style="width:350px;height:350px;" class="thumbnail"></div></li>
+
+		<li class="list-group-item"><img src="<%= business.get('img_url') %>" class="thumbnail"></li>
+		</div>
+	</ul>
+</div>
+	
 	Category: <%= business.get("category") %><br>
 	Neigborhood: <%= business.get("neighborhood") %><br>
-</li><br>
+	<br>
 <div class="reviews"></div>
 <div class="reviews-form"></div>
-<div class="photos"></div>
+<div class="carousel photos">
+
+</div>
 <div class="photos-form"></div>
 <script> 
 	$(".star-input").rating();
