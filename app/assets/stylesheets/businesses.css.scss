@@ -13,6 +13,10 @@
 	margin-left: 10%;
 }
 
+.carousel-photos{
+	overflow: scroll;
+}
+
 .wiz-biz {
 	display: block;
 	list-style-position: inside;
@@ -47,7 +51,8 @@
 }
 
 #map-canvas {
-	display: inline-block;
+	display: inline;
+	float: left;
 }
 
 .review-list{
@@ -62,7 +67,7 @@
 }
 
 #map-container{
-	width: 80%;
+	width: 90%;
 	margin-left: 10%;
 }
 
@@ -110,7 +115,7 @@
 	width: 62%;
 }
 
-#user-reviews{
+.user-reviews{
 	margin-left: 10%;
 }
 
