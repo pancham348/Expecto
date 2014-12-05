@@ -18,7 +18,6 @@
 //= require underscore
 //= require backbone
 //= require expecto
-//= require bootstrap-image-gallery.min
 //= require star-rating.min
 //require_tree ./bower_components
 //= require_tree ../templates
