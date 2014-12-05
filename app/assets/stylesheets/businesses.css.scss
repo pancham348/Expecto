@@ -2,9 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .biz-photo{
-	display: inline-block;
+	margin:0 10px;
+    text-align:center;
+	display: inline-block;        
+    padding:5px;
+    margin:5px;
 }
 
+#username{
+	margin-left: 50px;
+}
+
+#profile-pic-btn{
+	margin-left: 50px;
+}
+
+.biz-photo img{
+	width: 350px;
+	height: 350px;	
+}
+
+.carousel-photos{
+	width: 600px;
+	height: 400px;
+	white-space: nowrap;
+	overflow-x: auto;
+    padding:5px 25px;
+	position: relative;
+}
 .review-item{
 	height: 100px;
 	width: 100px;
@@ -16,12 +41,10 @@
 
 #add-photo-form{
 	margin-left: 10%;
+	white-space: nowrap;
 }
 
-.carousel-photos{
-	width: 500px;
-	overflow: scroll;
-}
+
 
 .wiz-biz {
 	display: block;
@@ -59,6 +82,12 @@
 #map-canvas {
 	display: inline;
 	float: left;
+}
+
+.user-review-list{
+	margin-left: 25%;
+	margin-right: 10%;
+	width: 70%;
 }
 
 .review-list{

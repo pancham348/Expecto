@@ -4,10 +4,10 @@
 <form action="/session" method="post" class="form-signin" role="form">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label>Username<br>
-    <input name="user[username]" type="text" class="form-control"><br>
+    <input name="user[username]" type="text" class="form-control" id="username"><br>
   </label><br>
   <label>Password<br>
-    <input name="user[password]" type="password" class="form-control"><br>
+    <input name="user[password]" type="password" class="form-control" id="password"><br>
   </label><br>
   <input type="submit" value="Sign In" class="btn btn-primary"><br>
 </form>

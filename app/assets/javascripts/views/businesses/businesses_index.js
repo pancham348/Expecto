@@ -9,7 +9,7 @@ Expecto.Views.BusinessesIndex = Backbone.CompositeView.extend({
   },
   
   events: {
-  	"click .categories li" : "renderCategory",
+  	"click .list-group-item" : "makeActive",
   },
   
   template: JST['businesses/index'],
@@ -22,6 +22,8 @@ Expecto.Views.BusinessesIndex = Backbone.CompositeView.extend({
 	  return this;
   },
   
-  
+  makeActive: function(event){
+	  $(event.currentTarget).addClass("active")
+  }
 
 });

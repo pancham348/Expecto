@@ -22,5 +22,6 @@ Expecto.Views.ReviewsForm = Backbone.CompositeView.extend({
 		    content: this.$(".review_content").val(), 
 		    business_id: this.business.id
 		}, { wait: true });
+		
 	}
 })

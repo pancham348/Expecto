@@ -1,4 +1,5 @@
 Expecto.Views.PhotosShow = Backbone.View.extend({
+	className: "biz-photo",
     initialize: function(options) {
 		this.business = options.business;
     	  this.listenTo(this.model, "sync change add remove", this.render)

@@ -21,7 +21,14 @@
 	 	<li><%= link_to 'My Profile', "#/users/#{current_user.id}" %></li>
 	 	<% else %>
 	 	<li><%= link_to 'Sign In', new_session_url%></li>
-		<li><%= link_to 'Guest Log In', new_session_url%></li>
+		<li id="guest-log-in"><%= link_to 'Guest Log In', new_session_url%></li>
 	 	<% end %>
 	 	</ul>
 </nav>
+<script>
+	$("#guest-log-in").click(guestLogIn())
+	function guestLogIn(){
+		$("#username").val("headmaster")
+		$("#password").val("pancham")
+	}
+</script>
