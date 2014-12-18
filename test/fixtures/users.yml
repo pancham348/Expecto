@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  username        :string(255)      not null
+#  password_digest :string(255)      not null
+#  first_name      :string(255)      not null
+#  last_name       :string(255)      not null
+#  location        :string(255)
+#  session_token   :string(255)      not null
+#  img_src         :string(255)      default("https://cdn1.iconfinder.com/data/icons/halloween-6/96/Witch-Hat-512.png")
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+#  column: value

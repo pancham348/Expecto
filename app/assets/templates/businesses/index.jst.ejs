@@ -1,0 +1,33 @@
+<h2 id="index-title">Best of Expecto: <%= _currentNeighborhood %></h2>
+<% if(_currentNeighborhood === "Diagon Alley") { %>
+	<a href="#/neighborhoods/Hogsmeade" class="neighborhood">Switch to Hogsmeade</a>
+<% }else{ %>
+	<a href="#/neighborhoods/Diagon+Alley" class="neighborhood">Switch to Diagon Alley</a>
+<% } %>
+<ul class="list-group" id="biz-main-page">
+<% businesses.each(function(biz){ %>
+	<li class="list-group-item" id="biz-item" data-id="<%= biz.get('id') %>">
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+			<a href="#/businesses/<%=biz.get('id')%>" class="thumbnail"><img src="<%= biz.get('img_url')%>" style="width:150px; height:150px"></a>
+			</div>
+		<div class="caption">
+			<h3 class="biz-name"><%= biz.get("name") %></h3>
+			<input type="number" class="rating star-input" value="<%= biz.get("rating")  %>" data-min=1 data-max=5 readonly="true" > <br>
+			 <%= biz.get("description") %><br>
+		</div>
+		</div>
+	</li>
+<% }) %>
+</ul>
+
+<div>
+<ul class="list-group" id="sidebar">
+	<li class="list-group-item sidebar" data-id="Food"><a href="#">Food</a></li>
+	<li class="list-group-item sidebar" data-id="clothing"><a href="#/categories/clothing">Clothing</a></li>
+	<li class="list-group-item sidebar" data-id="supplies"><a href="#/categories/supplies">School Supplies</a></li>
+	<li class="list-group-item sidebar" data-id="books"><a href="#/categories/books">Book Stores</a></li>
+	<li class="list-group-item sidebar" data-id="misc"><a href="#/categories/misc">Other Businesses</a></li>
+</ul>
+</div>
+<script> $(".star-input").rating(); </script>
