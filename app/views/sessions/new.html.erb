@@ -9,7 +9,7 @@
   <label>Password<br>
     <input name="user[password]" type="password" class="form-control" id="password"><br>
   </label><br>
-  <input type="submit" value="Sign In" class="btn btn-primary"><br>
+  <input type="submit" value="Sign In" class="btn btn-primary" id="sign-in-btn"><br>
 </form>
 <% unless logged_in? %>
 <%= link_to "Not a User? Sign Up here!", new_api_user_url%>
