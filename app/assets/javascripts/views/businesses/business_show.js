@@ -53,13 +53,13 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		this.addSubview(".photos-form", photoForm);
 	},
 	
-	addNearbyShops: function(){
-		Expecto.Collections.businesses.fetch()
-		var near_biz = Expecto.Collections.businesses.where({category: this.model.category, neighborhood: _currentNeighborhood})
-		var near_collection = new Expecto.Collections.Businesses(near_biz)
-		var nearShow = new Expecto.Views.NearShow({collection: near_collection});
-		this.addSubview(".near", nearShow);
-	},
+	// addNearbyShops: function(){
+	// 	Expecto.Collections.businesses.fetch()
+	// 	var near_biz = Expecto.Collections.businesses.where({category: this.model.category, neighborhood: _currentNeighborhood})
+	// 	var near_collection = new Expecto.Collections.Businesses(near_biz)
+	// 	var nearShow = new Expecto.Views.NearShow({collection: near_collection});
+	// 	this.addSubview(".near", nearShow);
+	// },
 	
 	initializeMap: function () {
 		if (this._alreadyRendered) {
