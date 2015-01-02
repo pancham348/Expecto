@@ -30,6 +30,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 			
 			this.addPhotoForm()
 		}
+		
 		view = this;
     },
 	

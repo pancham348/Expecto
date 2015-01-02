@@ -25,6 +25,9 @@
 <div class="reviews-form"></div>
 <div class="photos-form"></div>
 <h2 class="user-reviews">User Reviews</h2>
+<% if (_currentUserJSON === "null"){ %>
+	<a href="session/new" class="sign-in-link">Please sign in to add photos and reviews</a>
+<% } %>
 <div class="reviews"></div>
 <div class="near"></div>
 <script> 
