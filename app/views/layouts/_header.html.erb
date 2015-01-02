@@ -1,6 +1,6 @@
 <nav class= "navbar navbar-default"role="navigation">
 	
-	<a class="navbar-brand" href="#">Expecto
+	<a class="navbar-brand" href= "#">Expecto
 		<!-- <img alt="Brand" src="http://createfunnylogo.com/logo/harrypotter/Expecto.jpg"
 		width="200" height="50"> -->
 	</a>
@@ -15,25 +15,12 @@
 	      </form>
 		  
 	 	 <ul class="nav navbar-nav">
-	 	<li><%= link_to 'Home', '#' %></li>
+	 	<li><%= link_to 'Home', "#" %></li>
 	 	<% if logged_in? %>
 	 	<li><%= link_to 'Sign Out', session_url, method: :delete %></li>
 	 	<li><%= link_to 'My Profile', "#/users/#{current_user.id}" %></li>
 	 	<% else %>
 	 	<li><%= link_to 'Sign In', new_session_url%></li>
-		<li id="guest-log-in"><%= link_to 'Guest Log In', new_session_url%></li>
 	 	<% end %>
 	 	</ul>
 </nav>
-<script>
-	$("#guest-log-in").click(guestLogIn())
-	function guestLogIn(){
-		$("#username").val("headmaster")
-		$("#password").val("pancham")
-	}
-	$("#sign-in-btn").click(clearLogIn())
-	function clearLogIn(){
-		$("#username").empty();
-		$("#password").empty();
-	}
-</script>

@@ -4,14 +4,22 @@
 <form action="/session" method="post" class="form-signin" role="form">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label>Username<br>
-    <input name="user[username]" type="text" class="form-control" id="username"><br>
+    <input name="user[username]" type="text" class="form-control" id="username" value= ""><br>
   </label><br>
   <label>Password<br>
-    <input name="user[password]" type="password" class="form-control" id="password"><br>
+    <input name="user[password]" type="password" class="form-control" id="password" value= ""><br>
   </label><br>
   <input type="submit" value="Sign In" class="btn btn-primary" id="sign-in-btn"><br>
+  
 </form>
+<button class="btn btn-primary" id="guest-btn">Guest Log In</button><br>
 <% unless logged_in? %>
 <%= link_to "Not a User? Sign Up here!", new_api_user_url%>
 <% end %>
 </div>
+<script>
+$("#guest-btn").click(function guestLogIn(){
+	$("#username").val("headmaster")
+	$("#password").val("pancham")
+});
+</script>
