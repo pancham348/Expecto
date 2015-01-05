@@ -1,10 +1,11 @@
-<h3 class="user-reviews">Add Reviews</h3>
-<form id="new-review-form">
+<h3 class="user-reviews">Add a review</h3>
+<form class="form-horizontal" id="new-review-form">
  <div class="form-group">
 
 	<input class="star-input form-control" name="review[rating]" data-min=1 data-max=5 data-step=0.5 data-size="xl">
 
-	<label>Review</label><textarea name="review[content]" class="review_content"></textarea>
+	<label>Review</label><br>
+	<textarea name="review[content]" class="review_content"></textarea><br>
 	<input type="hidden" name="review[business_id]" value="<%= this.business_id %>">
 	<input type="hidden" name="review[user]" value="<%= this.user %>">
 	<button id="review-submit" class=" btn btn-primary">Submit</review>
