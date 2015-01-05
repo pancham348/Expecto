@@ -17,7 +17,6 @@
 //= require turbolinks
 //= require underscore
 //= require jquery.jcarousellite.min
-//= require carousel.min
 //= require backbone
 //= require expecto
 //= require star-rating.min
