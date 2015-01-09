@@ -16,7 +16,7 @@
 //= require jquery.serializeJSON
 //= require turbolinks
 //= require underscore
-//= require jquery.jcarousellite.min
+//= require slick.min
 //= require backbone
 //= require expecto
 //= require star-rating.min
