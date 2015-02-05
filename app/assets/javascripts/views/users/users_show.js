@@ -10,7 +10,10 @@ Expecto.Views.UsersShow = Backbone.CompositeView.extend({
 	  var $filePicker = this.$("input[type=filepicker]")
 		  filepicker.constructWidget($filePicker[0]);
 	  this.attachSubviews();
-	  $(".star-input").rating();
+	  $rating = this.$el.find('.biz-review').empty();
+	  $rating.raty({score: function(){
+	  	return $(this).attr('data-score');
+	  }, readOnly: true});
   	  return this;
     },
 	initialize: function() {

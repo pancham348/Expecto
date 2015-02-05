@@ -9,7 +9,8 @@
 	</div>
 	<div class="caption">
 		<h5 class="biz-name"><%= review.business().get("name") %></h5>
-		<input type="number" class="rating star-input" value="<%= business.get("rating")  %>" data-min=1 data-max=5 readonly="true">
+		<!-- <input type="number" class="rating star-input" value="<%= business.get("rating")  %>" data-min=1 data-max=5 readonly="true"> -->
+		<div class="biz-review" data-score="<%= business.get("rating")  %>"></div><br>
 		<%= review.get("content") %><br>
 		</div>
 	</div>
