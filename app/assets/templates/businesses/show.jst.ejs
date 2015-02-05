@@ -1,6 +1,6 @@
 <div class="biz-show">
 	<h2 class="biz-name"><%= business.get("name") %></h2><br>
-	Rating: <input type="number" class="rating star-show" value="<%= business.get("rating") %>" data-min=1 data-max=5 readonly="true" data-symbol="&#xf02d"; data-size="xl"><br>
+	<div id="rating"></div>
 	Location: <%= business.get("location") %><br>
 	Category: <%= business.get("category") %><br>
 	Neigborhood: <%= business.get("neighborhood") %><br>
@@ -13,8 +13,6 @@
 	<li class="list-group-item" id="map-photos"><div id="map-canvas" style="width:350px;height:350px;" class="thumbnail"></div>
 		<div class="wrap">
 			<div class="carousel-photos"></div>
-			<button class="prev">&laquo;</button>
-			<button class="next">&raquo;</button>
 			</div>
 		</div>
 		</li>
@@ -30,7 +28,6 @@
 <div class="reviews"></div>
 <div class="near"></div>
 <script> 
-	$(".star-input").rating();
-	$(".star-show").rating();
+
  </script>
 

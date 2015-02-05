@@ -7,6 +7,10 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 	  this.attachSubviews();
 	  //$("#input-2").rating();
 	  this.initializeMap();
+ 	$inputRating = this.$el.find('.input-rating').empty();
+    $inputRating.raty();
+	$rating = this.$el.find('#rating');
+	$rating.raty({score: this.model.get("rating"), readOnly: true});
   	  return this;
     },
 	
@@ -27,8 +31,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		this.model.photos().each(this.addPhoto.bind(this));
 		if (_currentUserJSON != 'null') {
 			this.addReviewForm();
-			
-			this.addPhotoForm()
+			this.addPhotoForm();
 		}
 		
 		view = this;
@@ -79,11 +82,19 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		      title: 'Hello World!'
 		  });
 		}
+		
+  	 	
+	},
+	
+	initializeRating: function () {
+	 	$inputRating = this.$el.find('.input-rating');
+	    $inputRating.raty();
 	},
 	
 	onRender: function () {
 		this._alreadyRendered = true;
 		this.initializeMap();
-		$(".star-input").rating();
+		// $(".star-input").rating();
+  	 	
 	}
 });

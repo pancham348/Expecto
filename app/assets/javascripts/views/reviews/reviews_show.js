@@ -13,7 +13,8 @@ Expecto.Views.ReviewsShow = Backbone.CompositeView.extend({
 		  user: this.user
 	  });
   	  this.$el.html(renderedContent);
-	  $(".rating").rating();
+	  $rating = this.$el.find('.review-rating');
+	  $rating.raty({score: this.model.get("rating"), readOnly: true});
   	  return this;
     },
 	

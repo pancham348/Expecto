@@ -19,11 +19,12 @@ Expecto.Views.BusinessesIndex = Backbone.CompositeView.extend({
 		  businesses: this.collection
 	  })
 	  this.$el.html(renderedContent);
+	  $rating = this.$el.find('.star-input');
+	  $rating.raty({score: function(){
+	  	return $(this).attr('data-score');
+	  }, readOnly: true});
 	  return this;
-  },
-  
-  makeActive: function(event){
-	  $(event.currentTarget).addClass("active")
   }
+  
 
 });

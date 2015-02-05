@@ -13,7 +13,9 @@
 			</div>
 		<div class="caption">
 			<a href="#/businesses/<%=biz.get('id')%>"><h3 class="biz-name"><%= biz.get("name") %></h3></a>
-			<input type="number" class="rating star-input" value="<%= biz.get("rating")  %>" data-min=1 data-max=5 readonly="true" > <br>
+			<!-- <input type="number" class="rating star-input" value="<%= biz.get("rating")  %>" data-min=1 data-max=5 readonly="true" > -->
+			
+			<div class="star-input" data-score="<%= biz.get("rating")  %>"></div><br>
 			 <%= biz.get("description") %><br>
 		</div>
 		</div>
@@ -30,4 +32,3 @@
 	<li class="list-group-item sidebar" data-id="misc"><a href="#/categories/misc">Other Businesses</a></li>
 </ul>
 </div>
-<script> $(".star-input").rating(); </script>

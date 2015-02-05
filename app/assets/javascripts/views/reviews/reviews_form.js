@@ -11,17 +11,17 @@ Expecto.Views.ReviewsForm = Backbone.CompositeView.extend({
     render: function(){
   	  var renderedContent = this.template()
   	  this.$el.html(renderedContent);
-	  
   	  return this;
     },
 	
 	submitForm: function(event){
 		event.preventDefault();
         this.model.reviews().create({
-			rating: $('.star-input').val(), 
+			rating: $('.input-rating').find('input[name="score"]').val(), 
 		    content: this.$(".review_content").val(), 
 		    business_id: this.business.id
 		}, { wait: true });
-		
+		$('.star-input').empty();
+		$(".review_content").empty(); 
 	}
 })

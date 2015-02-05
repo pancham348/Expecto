@@ -2,8 +2,8 @@
 <form class="form-horizontal" id="new-review-form">
  <div class="form-group">
 
-	<input class="star-input form-control" name="review[rating]" data-min=1 data-max=5 data-step=0.5 data-size="xl">
-
+	
+	<div class="input-rating"></div>
 	<label>Review</label><br>
 	<textarea name="review[content]" class="review_content" style="width: 500px; height: 150px;"></textarea><br>
 	<input type="hidden" name="review[business_id]" value="<%= this.business_id %>">

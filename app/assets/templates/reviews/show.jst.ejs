@@ -6,13 +6,11 @@
 			<%= review.user().get("first_name") %> <%= review.user().get("last_name") %>
 		  </a>
 		  <div class="media-body">
-		    <h4 class="media-heading"><input  type="number" class="rating star-input" data-min=1 data-max=5 readonly="true"  value="<%= review.get("rating")  %>" readonly="true"></h4>
+		    <div class="review-rating"></div>
 		    <%= review.get("content") %>
 		  </div>
 		</div>
 	 </li>
 </ul>
-<script> 
-	$(".star-input").rating();
- </script>
+
 
