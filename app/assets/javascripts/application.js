@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require underscore
 //= require jquery.raty
+//= require lightbox
 //= require slick.min
 //= require backbone
 //= require expecto
