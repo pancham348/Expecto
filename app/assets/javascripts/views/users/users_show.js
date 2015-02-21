@@ -26,7 +26,7 @@ Expecto.Views.UsersShow = Backbone.CompositeView.extend({
     },
 	addReview: function(review){
 			var reviewsShow = new Expecto.Views.ReviewsUserShow({model: review});
-			this.addSubview(".reviews", reviewsShow)
+			this.addSubview(".user-show-reviews", reviewsShow)
 		},
 	upload: function () {
 		var that = this;

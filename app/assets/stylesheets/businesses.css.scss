@@ -46,8 +46,10 @@
 	white-space: nowrap;
 }
 
-
-
+.user-show-reviews{
+	position: relative;
+	top: -120px;
+}
 .wiz-biz {
 	display: block;
 	list-style-position: inside;
@@ -87,8 +89,6 @@
 }
 
 .user-review-list{
-	position: absolute;
-	top: 140px;
 	margin-left: 25%;
 	margin-right: 10%;
 	width: 70%;
