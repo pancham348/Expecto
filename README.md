@@ -16,7 +16,7 @@ Expecto is a Yelp influenced, single Page application built using Backbone.js on
 
 ##Features currently being added:##
 	* Functional search with autocomplete
-	* Carousel for photos onbusiness show page
+	* Carousel for photos on business show page
 	* Front-end validations
 ##Possible additions:##
 	* Messaging between users
