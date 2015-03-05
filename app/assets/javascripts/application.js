@@ -14,7 +14,6 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require jquery.serializeJSON
-//= require turbolinks
 //= require underscore
 //= require jquery.raty
 //= require lightbox
