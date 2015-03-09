@@ -93,10 +93,10 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
   	 	
 	},
 	
-	initializeRating: function () {
-	 	$inputRating = this.$el.find('.input-rating');
-	    $inputRating.raty();
-	},
+	// initializeRating: function () {
+// 	 	$inputRating = this.$el.find('.input-rating');
+// 	    $inputRating.raty();
+// 	},
 	
 	onRender: function () {
 		this._alreadyRendered = true;
