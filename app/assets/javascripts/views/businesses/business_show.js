@@ -33,7 +33,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 			this.addReviewForm();
 			this.addPhotoForm();
 		}
-		
+
 		view = this;
     },
 	
@@ -57,6 +57,13 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		this.addSubview(".photos-form", photoForm);
 	},
 	
+	checkUniqueReview: function(){
+		for (var i = 0; i < this.model.reviews().models.length; i++) {
+			if(this.model.reviews().models[i].get("user_id") === currentUser.id){
+				console.log("already wrote a review");
+			}
+		}
+	},
 	// addNearbyShops: function(){
 	// 	Expecto.Collections.businesses.fetch()
 	// 	var near_biz = Expecto.Collections.businesses.where({category: this.model.category, neighborhood: _currentNeighborhood})
@@ -94,6 +101,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 	onRender: function () {
 		this._alreadyRendered = true;
 		this.initializeMap();
+		//this.checkUniqueReview();
 		// $(".star-input").rating();
   	 	
 	}

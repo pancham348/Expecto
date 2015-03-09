@@ -26,8 +26,9 @@
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
 <script>$(Expecto.initialize);</script>
 <script>
-  var _currentUserJSON = '<%= current_user.to_json.html_safe %>';
+  var _currentUserJSON = '<%= current_user.to_json(:only => [ :id, :username ]).html_safe %>';
   var _currentNeighborhood = "Diagon Alley";
+  var currentUser = JSON.parse(_currentUserJSON);
   // var _otherNeighborhood = "Hogsmeade";
 </script>
 <script src="assets/bootstrap-rating-input.min.js" type="text/javascript"></script>
