@@ -9,7 +9,8 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 		"categories/:id" : "category",
 		"businesses/:id" : "show",
 		"users/:id" : "showUser",
-		"neighborhoods/:id" : "switchNeighborhood"
+		"neighborhoods/:id" : "switchNeighborhood",
+		"search/?business%3D:term": "search"
 	},
 	
 	index: function(){
@@ -76,6 +77,20 @@ Expecto.Routers.Businesses = Backbone.Router.extend({
 		Backbone.history.navigate('/', {trigger: true})
 	},
 	
+	search: function(query){
+		var queryCorrect = decodeURIComponent(query);
+		var that = this;
+		Expecto.Collections.businesses.fetch({
+			success: function () {
+				var businesses = Expecto.Collections.businesses.search(queryCorrect)
+				var searchShow = new Expecto.Views.BusinessSearch({
+					collection: businesses
+				});
+				that._swapView(searchShow, that.$rootEl);
+			}
+		});
+		
+	},
 	_swapView: function(view){
 		if(this.currentView){
 			this.currentView.remove();

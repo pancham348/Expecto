@@ -1,5 +1,5 @@
 Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
-		template: JST['businesses/show'],
+	template: JST['businesses/show'],
 	
     render: function(){
   	  var renderedContent = this.template({business: this.model})
@@ -57,13 +57,13 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 		this.addSubview(".photos-form", photoForm);
 	},
 	
-	checkUniqueReview: function(){
-		for (var i = 0; i < this.model.reviews().models.length; i++) {
-			if(this.model.reviews().models[i].get("user_id") === currentUser.id){
-				console.log("already wrote a review");
-			}
-		}
-	},
+	// checkUniqueReview: function(){
+// 		for (var i = 0; i < this.model.reviews().models.length; i++) {
+// 			if(this.model.reviews().models[i].get("user_id") === currentUser.id){
+// 				console.log("already wrote a review");
+// 			}
+// 		}
+// 	},
 	// addNearbyShops: function(){
 	// 	Expecto.Collections.businesses.fetch()
 	// 	var near_biz = Expecto.Collections.businesses.where({category: this.model.category, neighborhood: _currentNeighborhood})

@@ -1,0 +1,20 @@
+<h2 id="index-title">Search Results:</h2>
+<ul class="list-group" id="biz-main-page">
+<% businesses.each(function(biz){ %>
+	<li class="list-group-item" id="biz-item" data-id="<%= biz.get('id') %>">
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+			<a href="#/businesses/<%=biz.get('id')%>" class="thumbnail"><img src="<%= biz.get('img_url')%>" style="width:150px; height:150px"></a>
+			</div>
+		<div class="caption">
+			<a href="#/businesses/<%=biz.get('id')%>"><h3 class="biz-name"><%= biz.get("name") %></h3></a>
+			<!-- <input type="number" class="rating star-input" value="<%= biz.get("rating")  %>" data-min=1 data-max=5 readonly="true" > -->
+			
+			<div class="star-input" data-score="<%= biz.get("rating")  %>"></div><br>
+			 <%= biz.get("description") %><br>
+		</div>
+		</div>
+	</li>
+<% }) %>
+</ul>
+

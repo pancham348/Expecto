@@ -16,6 +16,21 @@ Expecto.Collections.Businesses = Backbone.Collection.extend({
 		}
 		return model;
 	},
+	search: function (query) {
+			result_collection = new Expecto.Collections.Businesses();
+			var results = this.filter(function (model) {
+				var matchedExp = new RegExp(query, 'i');
+				var thing = model.get('name').match(matchedExp);
+				if (thing) {
+					return true;
+				} else {
+					return false;
+				}
+			});
+		
+			result_collection.set(results);
+			return result_collection
+		}   
 
 });
 Expecto.Collections.businesses = new Expecto.Collections.Businesses();
