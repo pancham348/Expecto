@@ -49,6 +49,11 @@
 .user-show-reviews{
 	position: relative;
 	top: -120px;
+	display: inline;
+}
+
+.user-show-reviews div{
+	display: inherit;
 }
 .wiz-biz {
 	display: block;
@@ -89,6 +94,7 @@
 }
 
 .user-review-list{
+	display: inline-block;
 	margin-left: 25%;
 	margin-right: 10%;
 	width: 70%;

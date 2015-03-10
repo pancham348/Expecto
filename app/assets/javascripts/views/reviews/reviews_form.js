@@ -22,6 +22,9 @@ Expecto.Views.ReviewsForm = Backbone.CompositeView.extend({
 		    business_id: this.business.id
 		}, { wait: true });
 		//$('.star-input').empty();
+		if ($('.input-rating').find('input[name="score"]').val() === null) {
+			$(".input-rating").addClass("form-group has-error")
+		}
 		$(".review_content").val(''); 
 		$(".review_content").focus(); 
 	}
