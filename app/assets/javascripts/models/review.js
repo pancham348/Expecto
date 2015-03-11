@@ -28,7 +28,7 @@ parse: function(response){
 },
 
 isValid: function(){
-	if ((this.get("rating") === 0)||(this.get("content") === "")) {
+	if ((this.get("rating") === "")||(this.get("content") === "")) {
 		return false;
 	}else{
 		return true;
