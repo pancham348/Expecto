@@ -28,7 +28,7 @@ Expecto.Views.ReviewsForm = Backbone.CompositeView.extend({
 		})
 		
 		if (review.isValid()) {
-			this.model.reviews().add(review, { wait: true });
+			this.model.reviews().create(review, { wait: true });
 		}else{
 			$(".errors").addClass("alert alert-danger alert-dismissible").append("<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> Please select a rating and enter some text in the review text box.")
 		}
