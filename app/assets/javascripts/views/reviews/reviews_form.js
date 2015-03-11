@@ -16,15 +16,25 @@ Expecto.Views.ReviewsForm = Backbone.CompositeView.extend({
 	
 	submitForm: function(event){
 		event.preventDefault();
-        this.model.reviews().create({
-			rating: $('.input-rating').find('input[name="score"]').val(), 
-		    content: this.$(".review_content").val(), 
+        // this.model.reviews().create({
+// 			rating: $('.input-rating').find('input[name="score"]').val(),
+// 		    content: this.$(".review_content").val(),
+// 		    business_id: this.business.id
+// 		}, { wait: true });
+		var review = new Expecto.Models.Review({
+			rating: $('.input-rating').find('input[name="score"]').val(),
+		    content: this.$(".review_content").val(),
 		    business_id: this.business.id
-		}, { wait: true });
-		//$('.star-input').empty();
-		if ($('.input-rating').find('input[name="score"]').val() === null) {
-			$(".input-rating").addClass("form-group has-error")
+		})
+		
+		if (review.isValid()) {
+			this.model.reviews().add(review, { wait: true });
+		}else{
+			$(".errors").addClass("alert alert-danger alert-dismissible").append("<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> Please select a rating and enter some text in the review text box.")
 		}
+		
+		
+		//$('.star-input').empty();
 		$(".review_content").val(''); 
 		$(".review_content").focus(); 
 	}

@@ -2,10 +2,10 @@
 <form class="form-horizontal" id="new-review-form">
  <div class="form-group">
 
-	
+	<div class="errors"></div>
 	<div class="input-rating"></div>
 	<label>Review</label><br>
-	<textarea name="review[content]" class="review_content" style="width: 500px; height: 150px;"></textarea><br>
+	<textarea name="review[content]" class="review_content form-control" style="width: 500px; height: 150px;"></textarea><br>
 	<input type="hidden" name="review[business_id]" value="<%= this.business_id %>">
 	<input type="hidden" name="review[user]" value="<%= this.user %>">
 	<button id="review-submit" class=" btn btn-primary">Submit</review>

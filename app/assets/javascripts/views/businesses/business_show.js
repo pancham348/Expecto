@@ -33,7 +33,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 			this.addReviewForm();
 			this.addPhotoForm();
 		}
-
+		Backbone.Validation.bind(this);
 		view = this;
     },
 	

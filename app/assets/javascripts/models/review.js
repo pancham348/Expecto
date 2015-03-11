@@ -12,7 +12,7 @@ Expecto.Models.Review = Backbone.Model.extend({
 		new Expecto.Models.Business();
 	return this._business;
 
-},
+	},
 
 parse: function(response){
 	if(this.user){
@@ -25,6 +25,24 @@ parse: function(response){
 		delete response.business;
 	}
 	return response;
+},
+
+isValid: function(){
+	if ((this.get("rating") === 0)||(this.get("content") === "")) {
+		return false;
+	}else{
+		return true;
+	}
+},
+
+validation: {
+	rating: {
+		required: true
+	},
+	
+	content: {
+		required: true
+	}
 }
 	
 });

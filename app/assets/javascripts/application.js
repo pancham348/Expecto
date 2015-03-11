@@ -19,6 +19,7 @@
 //= require lightbox
 //= require slick.min
 //= require backbone
+//= require backbone-validation-min
 //= require expecto
 //= require star-rating.min
 //require_tree ./bower_components

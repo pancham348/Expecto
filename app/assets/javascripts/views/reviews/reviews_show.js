@@ -2,6 +2,7 @@ Expecto.Views.ReviewsShow = Backbone.CompositeView.extend({
 	
     initialize: function(options) {
 		this.business = options.business;
+		
 		view = this;
     },
 	
