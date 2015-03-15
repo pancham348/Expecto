@@ -23,7 +23,7 @@ Expecto.Views.PhotosForm = Backbone.View.extend({
 	  			$("#photo-errors").addClass("alert alert-danger alert-dismissible").append("<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> Please enter a caption for the photo.")
 	  		}else{
 	  		  that.model.photos().create({img_src: blob.url, 
-	  		  caption: that.$("#photo_caption").val(), business_id: that.business.id});
+	  		  caption: that.$("#photo_caption").val(), business_id: that.business.id}, {wait: true});
 		  	}
 	  	  });
 	  

@@ -17,7 +17,7 @@
 //= require underscore
 //= require jquery.raty
 //= require lightbox
-//= require slick.min
+//= require jquery.bxslider.min
 //= require backbone
 //= require backbone-validation-min
 //= require expecto

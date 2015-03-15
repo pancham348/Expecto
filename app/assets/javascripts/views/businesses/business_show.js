@@ -11,6 +11,11 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
     $inputRating.raty();
 	$rating = this.$el.find('#rating');
 	$rating.raty({score: this.model.get("rating"), readOnly: true});
+	// $photos = this.$el.find('.carousel-photos');
+// 	$photos.bxSlider({
+// 		slideWidth: 500,
+// 		responsive: true
+// 	});
   	  return this;
     },
 	
