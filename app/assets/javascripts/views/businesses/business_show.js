@@ -16,6 +16,12 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 // 		slideWidth: 500,
 // 		responsive: true
 // 	});
+	
+	if(this.model.notUnique()){
+		$(".reviews-form").remove()
+		$("#review-errors").addClass("alert alert-danger").append("<span aria-hidden='true'></span><strong>Warning!</strong> You have already reviewed this business, please select another business to review.")
+	}
+
   	  return this;
     },
 	
@@ -38,6 +44,7 @@ Expecto.Views.BusinessShow = Backbone.CompositeView.extend({
 			this.addReviewForm();
 			this.addPhotoForm();
 		}
+		
 		Backbone.Validation.bind(this);
 		view = this;
     },

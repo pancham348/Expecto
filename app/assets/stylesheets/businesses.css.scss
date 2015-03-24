@@ -1,6 +1,10 @@
 // Place all the styles related to the businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#review-errors{
+	margin-left: 10%;
+}
+
 .biz-photo{
 	margin:0 10px;
     text-align:center;
@@ -22,6 +26,10 @@
 .biz-photo img{
 	width: 230px;
 	height: 230px;	
+}
+
+.biz-photo:hover { 
+	transform: scale(1.08); 
 }
 
 .carousel-photos{

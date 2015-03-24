@@ -1,6 +1,6 @@
 <nav class= "navbar navbar-default"role="navigation">
 	
-	<a class="navbar-brand" href= "#">Expecto
+	<a class="navbar-brand" href= "<%= root_url %>">Expecto
 		<!-- <img alt="Brand" src="http://createfunnylogo.com/logo/harrypotter/Expecto.jpg"
 		width="200" height="50"> -->
 	</a>
@@ -15,7 +15,7 @@
 	      </form>
 		  
 	 	 <ul class="nav navbar-nav">
-	 	<li><%= link_to 'Home', "#" %></li>
+	 	<li><%= link_to 'Home', root_url %></li>
 	 	<% if logged_in? %>
 	 	<li><%= link_to 'Sign Out', session_url, method: :delete %></li>
 	 	<li><%= link_to 'My Profile', "#/users/#{current_user.id}" %></li>
