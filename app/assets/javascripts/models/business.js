@@ -30,12 +30,14 @@ Expecto.Models.Business = Backbone.Model.extend({
 		},
 		
 	notUnique: function(){
-		for(var i = 0; i < this.reviews().length; i++){
-			if (currentUser.id === this.reviews().models[i].get("user_id")) {
-				return true
+		if (currentUser) {
+			for(var i = 0; i < this.reviews().length; i++){
+				if (currentUser.id === this.reviews().models[i].get("user_id")) {
+					return true
+				}
 			}
 		}
-		
+	
 		return false
 	}
 
