@@ -2,7 +2,7 @@ initSearch = function(){
 	$('#search-form').on('submit', function(event){
 		event.preventDefault();
 		// var thing = $(event.currentTarget).serialize();
-		debugger;
+		
 		var thing = $(event.currentTarget).find('input').val();
 		var thingEnc = encodeURIComponent(thing);
 		Backbone.history.navigate('search/?business%3D' + thingEnc, {trigger: true});
